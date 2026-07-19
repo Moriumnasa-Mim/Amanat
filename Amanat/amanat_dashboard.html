@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmanahChain - কমিটি ড্যাশবোর্ড</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+        * {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .sidebar-item {
+            transition: all 0.3s ease;
+        }
+        .sidebar-item:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 gradient-bg text-white">
+            <div class="p-6">
+                <div class="flex items-center space-x-3 mb-8">
+                    <i class="fas fa-mosque text-3xl"></i>
+                    <span class="text-xl font-bold">AmanahChain</span>
+                </div>
+                <div class="space-y-2">
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-white bg-opacity-20 sidebar-item">
+                        <i class="fas fa-dashboard w-5"></i>
+                        <span>ড্যাশবোর্ড</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 sidebar-item">
+                        <i class="fas fa-hand-holding-heart w-5"></i>
+                        <span>ফান্ড এন্ট্রি</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 sidebar-item">
+                        <i class="fas fa-chart-line w-5"></i>
+                        <span>খরচ এন্ট্রি</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 sidebar-item">
+                        <i class="fas fa-file-pdf w-5"></i>
+                        <span>রিপোর্ট জেনারেট</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 sidebar-item">
+                        <i class="fas fa-bell w-5"></i>
+                        <span>নোটিফিকেশন</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 sidebar-item">
+                        <i class="fas fa-star w-5"></i>
+                        <span>ট্রাস্ট স্কোর</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 sidebar-item">
+                        <i class="fas fa-cog w-5"></i>
+                        <span>সেটিংস</span>
+                    </a>
+                </div>
+            </div>
+            <div class="absolute bottom-0 w-64 p-6">
+                <div class="flex items-center space-x-3">
+                    <img src="https://via.placeholder.com/40" class="w-10 h-10 rounded-full">
+                    <div>
+                        <p class="font-semibold">ইমাম আব্দুর রহমান</p>
+                        <p class="text-xs opacity-75">সুপার অ্যাডমিন</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-y-auto">
+            <!-- Top Bar -->
+            <div class="bg-white shadow-sm p-4">
+                <div class="flex items-center justify-between">
+                    <h1 class="text-2xl font-bold text-gray-800">কমিটি ড্যাশবোর্ড</h1>
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <i class="fas fa-bell text-gray-500 text-xl"></i>
+                            <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-xs text-white flex items-center justify-center">3</span>
+                        </div>
+                        <button class="gradient-bg text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition">
+                            <i class="fas fa-plus-circle mr-2"></i>নতুন এন্ট্রি
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="p-6">
+                <!-- AI Audit Reminder -->
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 rounded-lg">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-robot text-yellow-400 text-2xl"></i>
+                        </div>
+                        <div class="ml-3 flex-1">
+                            <p class="text-sm text-yellow-700">
+                                <span class="font-bold">AI অডিট রিমাইন্ডার:</span> গত ৭ দিনে কোন রিপোর্ট আপডেট হয়নি। আজ রিপোর্ট আপডেট করুন আপনার ট্রাস্ট স্কোর বাড়ানোর জন্য।
+                            </p>
+                        </div>
+                        <button class="bg-yellow-400 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-500 transition">
+                            এখনই আপডেট করুন
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">বর্তমান ট্রাস্ট স্কোর</p>
+                                <p class="text-3xl font-bold text-gray-800">৪.৮/৫.০</p>
+                            </div>
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                <i class="fas fa-star text-xl"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-green-600 mt-2"><i class="fas fa-arrow-up"></i> গত মাস থেকে +০.৩</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">পেন্ডিং রসিদ</p>
+                                <p class="text-3xl font-bold text-gray-800">৫ টি</p>
+                            </div>
+                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-red-600 mt-2"><i class="fas fa-exclamation-circle"></i> আপলোড করুন</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">মাসিক রিপোর্ট</p>
+                                <p class="text-3xl font-bold text-gray-800">মার্চ</p>
+                            </div>
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                <i class="fas fa-file-pdf text-xl"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-blue-600 mt-2">জেনারেট রেডি</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-sm">নতুন ডোনার</p>
+                                <p class="text-3xl font-bold text-gray-800">১২ জন</p>
+                            </div>
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
+                                <i class="fas fa-user-plus text-xl"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-purple-600 mt-2">এই সপ্তাহে</p>
+                    </div>
+                </div>
+
+                <!-- Add Fund/Expense Forms -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                    <!-- Add Fund Form -->
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">➕ নতুন ফান্ড এন্ট্রি</h2>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2">ডোনারের নাম</label>
+                                <input type="text" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500" placeholder="যেমন: আব্দুর রহিম">
+                                <label class="inline-flex items-center mt-2">
+                                    <input type="checkbox" class="form-checkbox text-purple-600">
+                                    <span class="ml-2 text-sm text-gray-600">বেনামী রাখুন</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2">পরিমাণ (টাকা)</label>
+                                <input type="number" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500" placeholder="যেমন: ৫০০০">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2">ফান্ডের ধরণ</label>
+                                <select class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500">
+                                    <option>সাধারণ দান</option>
+                                    <option>জাকাত</option>
+                                    <option>সদকা</option>
+                                    <option>মসজিদ নির্মাণ তহবিল</option>
+                                    <option>এতিমখানা তহবিল</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2">রসিদ আপলোড</label>
+                                <input type="file" class="w-full border rounded-lg px-4 py-2">
+                            </div>
+                            <button type="submit" class="w-full gradient-bg text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                                ফান্ড সেভ করুন
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Add Expense Form -->
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">➖ নতুন খরচ এন্ট্রি</h2>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2">খরচের বিবরণ</label>
+                                <input type="text" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500" placeholder="যেমন: এতিমদের খাবার">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2">পরিমাণ (টাকা)</label>
+                                <input type="number" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500" placeholder="যেমন: ১২৫০০">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2">ক্যাটাগরি</label>
+                                <select class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:border-purple-500">
+                                    <option>খাবার</option>
+                                    <option>বেতন</option>
+                                    <option>বিদ্যুৎ বিল</option>
+                                    <option>মেরামত</option>
+                                    <option>অন্যান্য</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2">বিল/রসিদ আপলোড</label>
+                                <input type="file" class="w-full border rounded-lg px-4 py-2">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-semibold mb-2">ইমপ্যাক্ট ফটো (ঐচ্ছিক)</label>
+                                <input type="file" class="w-full border rounded-lg px-4 py-2">
+                                <p class="text-xs text-gray-500 mt-1">যেমন: খাবার বিতরণের ছবি</p>
+                            </div>
+                            <button type="submit" class="w-full bg-red-500 text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition">
+                                খরচ সেভ করুন
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Pending Approvals -->
+                <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">⏳ পেন্ডিং অ্যাপ্রুভাল</h2>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600">
+                                    <i class="fas fa-file-invoice"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">রসিদ #2345 - বিদ্যুৎ বিল</p>
+                                    <p class="text-sm text-gray-500">আপলোড করেছেন: ক্যাশিয়ার করিম | ২ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">অ্যাপ্রুভ</button>
+                                <button class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600">রিজেক্ট</button>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">ফান্ড এন্ট্রি - আব্দুল্লাহ (বেনামী)</p>
+                                    <p class="text-sm text-gray-500">পরিমাণ: ৳ ৫০,০০০ | ৫ ঘন্টা আগে</p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600">অ্যাপ্রুভ</button>
+                                <button class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600">রিজেক্ট</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generate Monthly Report -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">📄 মাসিক রিপোর্ট জেনারেট</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-2">মাস নির্বাচন করুন</label>
+                            <select class="w-full border rounded-lg px-4 py-2">
+                                <option>মার্চ ২০২৪</option>
+                                <option>ফেব্রুয়ারি ২০২৪</option>
+                                <option>জানুয়ারি ২০২৪</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-2">রিপোর্ট টাইপ</label>
+                            <select class="w-full border rounded-lg px-4 py-2">
+                                <option>সম্পূর্ণ রিপোর্ট (আয়+ব্যয়)</option>
+                                <option>শুধু আয়ের রিপোর্ট</option>
+                                <option>শুধু ব্যয়ের রিপোর্ট</option>
+                            </select>
+                        </div>
+                        <div class="flex items-end">
+                            <button class="w-full gradient-bg text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                                <i class="fas fa-file-pdf mr-2"></i>PDF জেনারেট করুন
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
